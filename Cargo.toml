@@ -1,0 +1,9 @@
+[package]
+
+name = "rustyviews"
+version = "0.0.1"
+authors = [ "Jordan Earls <earlz@earlz.net>" ]
+
+[[bin]]
+
+name = "rustyviews"
