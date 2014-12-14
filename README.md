@@ -24,7 +24,7 @@ Example view:
 
 Usage:
 
-	let template=SomeView::new();
+	let mut template=SomeView::new();
 	template.title="Foo bar";
 	println("{}", template.render()); //could also render to a stream probably as well
 
