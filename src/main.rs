@@ -6,10 +6,10 @@ use std::str;
 fn main() {
   println!("meh");
   let filename=&os::args()[1];
-  let contents = match File::open(&Path::new(filename)).read_to_end() {
-  	Ok(s) => str::from_utf8(s.as_slice()).expect("this shouldn't happen").to_string(),
-  	Err(e) => "".to_string()
+  let contents = match File::open(&Path::new(filename)).read_to_string() {
+  	Ok(s) => s,
+  	Err(e) => panic!("Could not open template! {}", e)
   };
-  println!("ugh {}", contents.to_string());
+  println!("ugh {}", contents);
 }
 
